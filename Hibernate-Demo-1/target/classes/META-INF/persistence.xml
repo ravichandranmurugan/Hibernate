@@ -20,7 +20,7 @@
 		<!-- <jta-data-source>java:global/jdbc/default</jta-data-source> -->
 
 		<properties>
-			<property name="packagesToScan" value="tut.hib" />
+			<property name="packagesToScan" value="tut.hibernate.modal" />
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.cj.jdbc.Driver" />
 
@@ -32,9 +32,7 @@
 			<property name="javax.persistence.jdbc.password"
 				value="hgjlah12#$H" />
 
-			<property name="hibernate.dialect"
-				value="org.hibernate.dialect.MySQL5Dialect" />
-
+			 <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
 			<property
 				name="javax.persistence.schema-generation.database.action"
 				value="drop-and-create" />
