@@ -23,10 +23,10 @@ public class UserPrinciple implements  UserDetails{
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO Auto-generated method stub
-		List<Role> role = userService.getRole();
+		String[] role = userService.getRole();
 		List<SimpleGrantedAuthority> authorities = new ArrayList<SimpleGrantedAuthority>();
-		for (Role r : role) {
-			authorities.add(new SimpleGrantedAuthority(r.getRole()));
+		for (String r : role) {
+			authorities.add(new SimpleGrantedAuthority(r));
 		}
 
 		return authorities;

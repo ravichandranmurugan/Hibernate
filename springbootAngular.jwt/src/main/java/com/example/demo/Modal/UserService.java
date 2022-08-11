@@ -1,17 +1,20 @@
 package com.example.demo.Modal;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -30,6 +33,7 @@ public class UserService implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(nullable = false,updatable = false)
 	private Long id;
 	private String userId;
 	private String firstName;
@@ -37,10 +41,12 @@ public class UserService implements Serializable {
 	private String password;
 	private String email;
 	private String ingUrl;
-	private LocalDate lastLoginDate;
-	private LocalDate joinDate;
-	@OneToMany( cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private List<Role> role = new ArrayList<Role>();
+	private Date lastLoginDate;
+	private Date lastLoginDateDispaly;
+	private Date joinDate;
+//	@JsonIgnore
+//	@OneToMany( cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private String[] role = {};
 	private boolean isActive;
 	private boolean isNotLocked;
 	
