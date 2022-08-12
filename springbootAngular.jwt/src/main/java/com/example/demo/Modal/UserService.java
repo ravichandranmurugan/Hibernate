@@ -33,21 +33,23 @@ public class UserService implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(nullable = false,updatable = false)
+	@Column(nullable = false, updatable = false)
 	private Long id;
 	private String userId;
 	private String firstName;
 	private String lastName;
+	private String userName;
 	private String password;
 	private String email;
-	private String ingUrl;
+	private String imgUrl;
 	private Date lastLoginDate;
 	private Date lastLoginDateDispaly;
 	private Date joinDate;
 //	@JsonIgnore
 //	@OneToMany( cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private String[] role = {};
+	private String role;
+	private String[] authorities;
 	private boolean isActive;
 	private boolean isNotLocked;
-	
+
 }

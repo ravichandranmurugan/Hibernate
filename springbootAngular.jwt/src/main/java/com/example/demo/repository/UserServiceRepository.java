@@ -7,6 +7,6 @@ import com.example.demo.Modal.UserService;
 
 @Repository
 public interface UserServiceRepository extends JpaRepository<UserService, Long> {
- UserService   findByFirstName(String firstName);
+ UserService   findByUserName(String firstName);
  UserService  findByEmail(String email);
 }

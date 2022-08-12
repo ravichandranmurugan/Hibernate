@@ -22,6 +22,9 @@ public class SecurityConstant {
 	
 	public static final String OPTIONS_HTTP_METHOS= "OPTIONSD";
 	
-	public static final String[] PUBLIC_URLs= {"/user/login","/user/register","/user/resetpassword/**","/user/image/**"}; 
 	
+
+//	public static final String[] PUBLIC_URLs= {"/user/login","/user/register","/user/resetpassword/**","/user/image/**"}; 
+	public static final String[] PUBLIC_URLs= {"**"}; 
+
 }
