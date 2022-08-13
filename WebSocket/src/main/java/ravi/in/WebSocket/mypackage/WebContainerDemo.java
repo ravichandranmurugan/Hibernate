@@ -60,10 +60,10 @@ public class WebContainerDemo {
 		// TODO Auto-generated method stub
 		WebContainerDemo wcd = new WebContainerDemo(8008, "config.properties");
 		wcd.loadProperties();
-		wcd.handlers.forEach((key,HttpServletCustom)->{
-			System.out.println(key);
-			HttpServletCustom.doget();	
-		});
+//		wcd.handlers.forEach((key,HttpServletCustom)->{
+//			System.out.println(key);
+//			HttpServletCustom.doget();	
+//		});
 		wcd.start();
 	}
 
